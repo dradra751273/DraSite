@@ -5,16 +5,16 @@ from django.views.generic.edit import CreateView
 from django.views.generic import ListView
 
 # from .forms import ProfileForm
-# from .models import UserProfile
+from .models import UserProfile
 
 
 # Create your views here
 
 class CreateProfileView(CreateView):
     template_name = "profiles/create_profile.html"
-    # model = UserProfile
-    # fields = "__all__"
-    # success_url = "/profiles"
+    model = UserProfile
+    fields = "__all__"
+    success_url = "/profiles"
 
 
 class ProfilesView(ListView):
